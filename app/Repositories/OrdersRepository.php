@@ -21,8 +21,8 @@ class OrdersRepository
 
         $drug = Drug::find($order->drug_id);
 
-        Mail::to($order->address)->send(new OrderMail($drug,$drug->drugStore,$order->name,OrderMail::ORDER_TO_BUYER));
-        Mail::to($drug->drugStore->email)->send(new OrderMail($drug,$drug->drugStore,$order->name,OrderMail::ORDER_TO_SELLER));
+        // Mail::to($order->address)->send(new OrderMail($drug,$drug->drugStore,$order->name,OrderMail::ORDER_TO_BUYER));
+        // Mail::to($drug->drugStore->email)->send(new OrderMail($drug,$drug->drugStore,$order->name,OrderMail::ORDER_TO_SELLER));
 
         return $order->save();
     }

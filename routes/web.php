@@ -39,7 +39,7 @@ Route::get('login', [HomeController::class, 'auth']);
 Route::post('auth-register', [HomeController::class, 'authRegister']);
 Route::get('reload-captcha', [HomeController::class, 'reloadCaptcha']);
 Route::post('auth-login', [HomeController::class, 'authLogin'])->middleware('checkUserStatus');
-Route::get('auth-logout', [HomeController::class, 'logout']);
+Route::get('auth-logout', [HomeController::class, 'logout'])->name('logout');
 Route::get('auth-password-reset', [HomeController::class, 'resetPasswordView']);
 Route::post('auth-password-reset-save', [HomeController::class, 'resetPassword']);
 Route::get('reset-password/{token}', [HomeController::class, 'resetPasswordFinal']);

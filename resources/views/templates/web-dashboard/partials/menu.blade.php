@@ -11,16 +11,16 @@
         <a href="#blog" data-toggle="tab">{{__('Blogu')}}</a>
         <a href="#acceptedDrugs" data-toggle="tab">{{__('Prano Barnat')}}
         @if($countNotAccepted > 0)
-                <span class="badge rounded-pill bg-warning text-dark">{{$countNotAccepted}}</span>
-            @endif
+            <span class="badge rounded-pill bg-warning text-dark">{{$countNotAccepted}}</span>
+        @endif
         </a>
     @endif
     <a href="#countProfile-Views" data-toggle="tab">{{__('Shikimet e profilit')}}</a>
     <a href="#account-info" data-toggle="tab"> {{__('Llogaria')}}</a>
     @if(auth()->user()->is_admin)
-        <a href="#jiraBugPanel" data-toggle="tab">{{__('Jira ')}}</a>
+        {{-- <a href="#jiraBugPanel" data-toggle="tab">{{__('Jira ')}}</a> --}}
         @endif
-    <a id="logOutBtn" href="{{action('HomeController@logout')}}">{{__('Çkyqu')}}</a>
+    <a id="logOutBtn" href="{{ route('logout') }}">{{__('Çkyqu')}}</a>
 </div>
 @section('scripts')
     <script>

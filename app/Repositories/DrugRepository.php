@@ -107,6 +107,7 @@ class DrugRepository
                 ->orderBy('users.advertise_type', 'asc');
         }
 
+
         return $drugs->paginate(20);
     }
 
