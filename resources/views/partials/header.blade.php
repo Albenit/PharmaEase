@@ -10,7 +10,7 @@
                     <nav>
                         <ul>
                             <li><a href="/">Ballina </a></li>
-                            <li><a href="{{action('BlogController@getBlogs')}}">Blog </a></li>
+                            {{-- <li><a href="{{action('BlogController@getBlogs')}}">Blog </a></li> --}}
                             <li><a href="{{action('ContactController@contactView')}}">Kontakt </a></li>
                         </ul>
                     </nav>
