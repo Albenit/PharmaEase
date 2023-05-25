@@ -5240,6 +5240,14 @@ body:not(.elementor-editor-active) .modern-grid .grid-item.animate {
     }
 }
 
+.backgroundasfoto {
+    background-image: url("../../internalImg/backgorund2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 500px;
+    background-size: cover;
+}
 @media only screen and (max-width: 767px) {
     .slider-height-3 {
         height: 650px;

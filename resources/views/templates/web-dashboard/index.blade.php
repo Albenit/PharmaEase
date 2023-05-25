@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 @section('content')
     <div class="my-account-area pt-75 pb-75">
-        <div class="container">
+        <div class="custom-container">
             <div class="row">
                 <div class="col-lg-12">
                     <!-- My Account Page Start -->
