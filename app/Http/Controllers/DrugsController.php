@@ -28,6 +28,7 @@ class DrugsController extends Controller
     }
     public function viewDrug($id){
         $drug = $this->drugRepository->getById($id);
+        
         if(!is_null($drug) && $drug->isAccepted()){
             $this->drugSeenRepository->addVisit($drug->id);
             return view('templates.web.drugs.index',['drug'=>$drug,'related'=>$this->drugRepository->findRelatedDrugs($drug)]);

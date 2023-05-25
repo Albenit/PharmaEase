@@ -12,7 +12,7 @@
                                         <div class="product-img-action-wrap mb-10">
                                             <div class="product-img product-img-zoom">
                                                 <a href="{{action('DrugsController@viewDrug',$drug->id)}}">
-                                                    <img class="default-img" src="{{asset($drug->mainImagePath())}}"
+                                                    <img class="default-img" style="max-height: 150px; max-width:150px" src="images/{{$drug->mainImagePath()}}"
                                                          alt="{{$drug->name}}">
                                                 </a>
                                             </div>

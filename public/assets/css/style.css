@@ -11248,11 +11248,23 @@ body:not(.elementor-editor-active) .modern-grid .grid-item.animate {
 /*-------- 15. Product details style ---------*/
 .product-dec-small-style1 {
     margin: 13px auto 0;
+    justify-content: center;
+}
+.slick-track {
+    width: unset;
+    display: flex;
+    justify-content: center;
+
+}
+.product-details-slider-wrap {
+    width: unset !important;
 }
 
 .product-dec-small-style1 .product-dec-small {
     margin: 0 5px 0px 5px;
     cursor: pointer;
+    width: unset !important;
+
 }
 
 .product-dec-small-style1 .product-dec-small img {

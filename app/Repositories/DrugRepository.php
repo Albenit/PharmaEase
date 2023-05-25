@@ -149,12 +149,17 @@ class DrugRepository
             $img = Image::make($main->getRealPath());
             $img->resize(400, 400);
             $img->stream();
-            Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
-
+        
+            // Pass the filename instead of the $img object to the move() method
+            $main->move('images', $fileName);
+        
+            // Alternatively, you can use the Storage facade to move the image
+            // Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
+        
             $mainObj = new Drug_Images();
             $mainObj->drug_id = $drug->id;
             $mainObj->is_main = true;
-            $mainObj->image = "/storage/images/" . $fileName;
+            $mainObj->image = $fileName;
             $mainObj->save();
         }
 
@@ -165,12 +170,13 @@ class DrugRepository
                 $img = Image::make($image->getRealPath());
                 $img->resize(345, 345);
                 $img->stream();
-                Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
+                $image->move('images', $fileName);
+                // Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
 
                 $mainObj = new Drug_Images();
                 $mainObj->drug_id = $drug->id;
                 $mainObj->is_main = false;
-                $mainObj->image = "/storage/images/" . $fileName;
+                $mainObj->image = $fileName;
                 $mainObj->save();
             }
         }

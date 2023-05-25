@@ -9,7 +9,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="about-us-img wow tmFadeInUp">
-                        <img class="mb-30" src="{{asset($user->logo)}}" alt="">
+                        <img class="mb-30" src="../images/{{$user->logo}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -42,7 +42,7 @@
                                 <div class="product-img-action-wrap mb-20">
                                     <div class="product-img product-img-zoom">
                                         <a href="{{action('DrugsController@viewDrug',$drug->id)}}">
-                                            <img class="default-img" src="{{asset($drug->mainImagePath())}}" alt="">
+                                            <img class="default-img" src="../images/{{$drug->mainImagePath()}}" alt="">
                                         </a>
                                     </div>
                                 </div>
