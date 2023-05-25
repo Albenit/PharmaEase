@@ -39,7 +39,7 @@
                         </div>
                     </div>
                 @else
-                    <div class="shop-bottom-area">
+                    <div class="shop-bottom-area text-center pt-150 pb-150">
                         <h3 class="mb-20">{{__('Nuk është gjetur asnjë produkt !')}}</h3>
                     </div>
                 @endif
