@@ -17,7 +17,7 @@
                                         </div>
                                         <div class="slidebar-product-img-2 text-center mt-2">
                                             <a href="javascript:void(0)"><img id="output"
-                                                                              src="{{asset($drug->mainImagePath())}}"
+                                                                              src="{{asset('images/'.$drug->mainImagePath())}}"
                                                                               alt=""></a>
                                         </div>
                                     </div>
@@ -27,7 +27,7 @@
                                         <div id="otherPhottosDivImgPlace" class="sidebar-post-wrap mt-30 text-center">
                                             @foreach($drug->images as $image)
                                                 <div class="single-sidebar-post"><a href="javascript:void(0)"><img
-                                                            width="200px" src="{{$image->image}}"></a></div>
+                                                            width="200px" src="{{asset('images/'.$image->image)}}"></a></div>
                                             @endforeach
                                         </div>
                                     </div>

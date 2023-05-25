@@ -5,22 +5,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DrugsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrdersController;
-use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserController;
-use App\Jobs\TestJob;
-use App\Mail\WelcomeMail;
-use App\Models\Drug;
-use App\Models\ProfileViews;
-use App\Models\User;
-use App\Notifications\JuniorParrotAPI;
-use App\Notifications\SlackMessageAPI;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Storage;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,7 +42,6 @@ Route::group(['prefix' => 'blog'], function () {
     Route::get('/', [BlogController::class, 'getBlogs']);
     Route::get('view/{id}', [BlogController::class, 'viewBlog']);
 });
-
 
 
 Route::get('/testime',function (){

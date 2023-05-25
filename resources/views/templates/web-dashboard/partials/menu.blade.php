@@ -6,9 +6,9 @@
         <a href="#drugstores" data-toggle="tab">{{__('Barnatoret')}}</a>
         <a href="#payments" data-toggle="tab">{{__('Pagesat')}}</a>
         <a href="#statistics" data-toggle="tab">{{__('Statistikat')}}</a>
-        <a href="#blogstatistics" data-toggle = "tab"> {{__('Statistikat e blogut')}}</a>
+        {{-- <a href="#blogstatistics" data-toggle = "tab"> {{__('Statistikat e blogut')}}</a> --}}
         <a href="#contact-messages" data-toggle="tab">{{__('Mesazhet')}}</a>
-        <a href="#blog" data-toggle="tab">{{__('Blogu')}}</a>
+        {{-- <a href="#blog" data-toggle="tab">{{__('Blogu')}}</a> --}}
         <a href="#acceptedDrugs" data-toggle="tab">{{__('Prano Barnat')}}
         @if($countNotAccepted > 0)
             <span class="badge rounded-pill bg-warning text-dark">{{$countNotAccepted}}</span>

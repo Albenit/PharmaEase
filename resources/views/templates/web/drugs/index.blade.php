@@ -9,7 +9,7 @@
 @endsection
 @section('content')
     <div id="fb-root"></div>
-    <div class="container">
+    <div class="custom-container">
         <div class="row pt-120 pb-75">
             <div class="col-6 ">
                 <div class="">
@@ -27,9 +27,9 @@
                                                     <div class="single-big-img-style mx-auto">
                                                         <div class="pro-details-big-img">
                                                             <a class="img-popup d-flex justify-content-center"
-                                                                href="../images/{{ $image->image }}">
+                                                                href="{{asset('images/'.$image->image)}}">
                                                                 <img style="height: 350px; width:350px"
-                                                                    src="../images/{{ $image->image }}" alt="">
+                                                                    src="{{asset('images/'.$image->image)}}" alt="">
                                                             </a>
                                                         </div>
                                                     </div>
@@ -40,7 +40,7 @@
                                                 @foreach ($images as $image)
                                                     <div class="product-dec-small active" style="width:unset !important">
                                                         <img class="" style="height: 30px; width:30px"
-                                                            src="../images/{{ $image->image }}" alt="">
+                                                            src="{{asset('images/'.$image->image)}}" alt="">
                                                     </div>
                                                 @endforeach
                                             </div>

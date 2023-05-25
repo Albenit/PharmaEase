@@ -39,11 +39,12 @@ class UserRepository
             $fileName = time() . '.' . $logo->getClientOriginalExtension();
             $img = Image::make($logo->getRealPath());
             $img->stream();
-            Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
+            $logo->move('images',$fileName);
+            // Storage::disk('local')->put('public/images/' . $fileName, $img, 'public');
             if (file_exists($user->logo)) {
                 unlink($user->logo);
             }
-            $user->logo = "/storage/images/" . $fileName;
+            $user->logo = $fileName;
         }
 
         if (!is_null($request->input('password'))) {
