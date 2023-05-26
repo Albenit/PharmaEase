@@ -42,6 +42,7 @@ class DashboardController extends Controller
             'orders' => $this->ordersRepository->getOrders(),
             'payments'=>$this->paymentsRepository->getAll(),
             'blogs'=>$this->blogRepository->getBlogs(),
+            'messages' => $this->contactMessagesRepository->getAll(),
             'drugsToBeAccepted' => $this->drugRepository->getNotAcceptedDrugs(),
             'totalSumDrugs' => $this->drugRepository->countTotal(),
             'countNotAccepted' => $this->drugRepository->countNotAccepted()]);

@@ -33,13 +33,15 @@
                             <td>{{\Carbon\Carbon::parse($store->created_at)->format('d-m-Y H:i:s')}}</td>
                             <td>
                                 <a href="{{action('UserController@advertiseType',['id'=>$store->id,'type'=>\App\Models\User::ADVERTISE_TYPE_PREMIUM])}}"
-                                   class="check-btn sqr-btn ">Premium</a>
+                                   class="check-btn sqr-btn " >Premium</a> |
                                 <a href="{{action('UserController@advertiseType',['id'=>$store->id,'type'=>\App\Models\User::ADVERTISE_TYPE_TOP])}}"
-                                   class="check-btn sqr-btn ">Top</a>
+                                   class="check-btn sqr-btn ">Top</a> |
                                 <a href="{{action('UserController@advertiseType',['id'=>$store->id,'type'=>\App\Models\User::ADVERTISE_TYPE_STANDARD])}}"
-                                   class="check-btn sqr-btn ">Standard</a>
-                                <a href="{{action('UserController@deleteUser',$store->id)}}"
-                                   class="check-btn sqr-btn ">Fshije</a>
+                                   class="check-btn sqr-btn ">Standard</a> 
+                                   @if ($store->id != auth()->user()->id)   
+                                    | <a href="{{action('UserController@deleteUser',$store->id)}}"
+                                        class="check-btn sqr-btn ">Fshije</a>
+                                   @endif
                             </td>
                             @if(Cache::has('user-is-online-' . $store->id))
                                 <td><span class="text-success">Online</span></td>
@@ -49,7 +51,7 @@
                             <td>
 
                                 <a href="{{action('UserController@userStatus',['id'=>$store->id,'status' => $store->is_active])}}"
-                                   class="check-btn sqr-btn ">{{($store->is_active == \App\Models\User::USER_IS_ACTIVE) ? "Aktive" : "Jo Aktive" }}</a>
+                                   class="check-btn sqr-btn " style="color:blue">{{($store->is_active == \App\Models\User::USER_IS_ACTIVE) ? "Aktive" : "Jo Aktive" }}</a>
                             </td>
                         </tr>
                     @endforeach

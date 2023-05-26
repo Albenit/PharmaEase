@@ -4,7 +4,7 @@
             <div class="col-width-25 custom-common-column">
                 <div class="footer-widget footer-about mb-30">
                     <div class="footer-logo logo-width-1">
-                      <span>BarnatoreON</span>
+                      <span>PharmaEase</span>
                     </div>
                     <div class="copyright">
                         <p>Copyright © {{date('Y')}} {{config('app.name')}} |<br>

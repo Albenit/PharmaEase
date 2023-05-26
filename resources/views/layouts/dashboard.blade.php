@@ -14,12 +14,12 @@
     <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="BarnatoreON"/>
+    <meta property="og:title" content="PharmaEase"/>
     <meta property="og:url" content="{{getenv('APP_URL')}}"/>
     <meta property="og:site_name" content="{{getenv('APP_NAME')}}"/>
     <!-- For the og:image content, replace the # with a link of an image -->
     <meta property="og:image" content="{{asset('assets/images/logo/logo.png')}}"/>
-    <meta property="og:description" content="BarnatoreON"/>
+    <meta property="og:description" content="PharmaEase"/>
     <!-- Add site Favicon -->
     <link rel="icon" href="{{asset('assets/images/logo/logo.png')}}" sizes="32x32"/>
 
