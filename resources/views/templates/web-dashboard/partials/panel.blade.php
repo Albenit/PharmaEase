@@ -24,11 +24,12 @@
         @include('templates.web-dashboard.partials.blog')
         @include('templates.web-dashboard.partials.acceptedDrugs')
         @include('templates.web-dashboard.partials.jiraBugsNotifier')
+        @include('templates.web-dashboard.partials.registerPharmacy')
     @endif
     @include('templates.web-dashboard.partials.drugs')
     @include('templates.web-dashboard.partials.orders')
     @include('templates.web-dashboard.partials.profileViews')
     <!-- Single Tab Content Start -->
-        @include('templates.web-dashboard.partials.account')
+        {{-- @include('templates.web-dashboard.partials.account') --}}
     </div>
 </div> <!-- My Account Tab Content End -->
