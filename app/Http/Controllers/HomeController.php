@@ -67,16 +67,9 @@ class HomeController extends Controller
 
 
         if ($this->userRepository->store($request)) {
-            if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
-                Notification::route('slack', env('SLACK_WEBHOOK'))
-                    ->notify(new SlackMessageAPI($validated));
-                return redirect()->action([DashboardController::class, 'index']);
-            } else {
-                return redirect()->action([HomeController::class, 'index']);
-
-            }
+            return back()->with('success','Farmacia u rexhistrua me sukses :)');
         } else {
-            return redirect()->action([HomeController::class, 'index']);
+            return back()->with('error','Error ne procesim te te dhenave!');
         }
     }
 

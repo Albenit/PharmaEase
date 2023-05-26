@@ -14,12 +14,10 @@
             <span class="badge rounded-pill bg-warning text-dark">{{$countNotAccepted}}</span>
         @endif
         </a>
+        <a href="#registerPharm" data-toggle="tab"> {{__('Hap Llogari')}}</a>
     @endif
     <a href="#countProfile-Views" data-toggle="tab">{{__('Shikimet e profilit')}}</a>
-    <a href="#account-info" data-toggle="tab"> {{__('Llogaria')}}</a>
-    @if(auth()->user()->is_admin)
-        {{-- <a href="#jiraBugPanel" data-toggle="tab">{{__('Jira ')}}</a> --}}
-        @endif
+    {{-- <a href="#account-info" data-toggle="tab"> {{__('Llogaria')}}</a> --}}
     <a id="logOutBtn" href="{{ route('logout') }}">{{__('Çkyqu')}}</a>
 </div>
 @section('scripts')

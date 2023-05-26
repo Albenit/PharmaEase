@@ -10,6 +10,7 @@
                 <thead class="thead-light">
                 <tr>
                     <th>Emri Barnes</th>
+                    <th>Qmimi Barnes</th>
                     <th>Barnatorja</th>
                     <th>Në pritje</th>
                     <th>Aksion</th>
@@ -18,8 +19,9 @@
                 <tbody>
                 @if(count($drugsToBeAccepted)>0)
                     @foreach($drugsToBeAccepted as $drug)
-                        <tr>
+                        <tr data-toggle="modal" data-target="#drugToBeAcceptedModal">
                             <td>{{$drug->name}}</td>
+                            <td>{{$drug->price}}</td>
                             <td>{{$drug->drugStore->name}}</td>
                             <td>{{($drug->getDuration() > 0 ) ? $drug->getDuration() .' orë ' : $drug->getDurationMinutes() . ' minuta'}} </td>
                             <td><a  href="{{action('DrugsController@acceptDrug',$drug->id)}}"
@@ -29,6 +31,7 @@
                                     class="check-btn sqr-btn ">Mos prano</a>
                             </td>
                         </tr>
+
                     @endforeach
                 @else
                     <tr>

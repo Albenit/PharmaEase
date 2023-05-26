@@ -6,6 +6,8 @@
             <table class="table table-bordered">
                 <thead class="thead-light">
                 <tr>
+
+                    <th>Barnatorja</th>
                     <th>Emri</th>
                     <th>Çmimi</th>
                     <th>Aksion</th>
@@ -15,6 +17,7 @@
                 @if(count($drugs)>0)
                     @foreach($drugs as $drug)
                         <tr>
+                            <td>{{$drug->drugStore->name}}</td>
                             @if($drug->user_id == auth()->user()->id)
                                 <td>{{$drug->name}} <span><i class="fas fa-bookmark" title="Medikamenti i juaj &#128512"></i></span ></td>
                             @else
@@ -23,9 +26,9 @@
                             <td>{{$drug->price}}</td>
                             <td>
                                 <a href="{{action('DrugsController@editDrugView',$drug->id)}}"
-                                   class="check-btn sqr-btn ">Edito</a>
+                                   class="check-btn sqr-btn " style="color: blue">Edito</a> |
                                 <a href="{{action('DrugsController@deleteDrug',$drug->id)}}"
-                                   class="check-btn sqr-btn ">Fshije</a>
+                                   class="check-btn sqr-btn " style="color: red">Fshije</a>
                             </td>
                         </tr>
 
