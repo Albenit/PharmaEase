@@ -69,7 +69,7 @@
                                     <label>Captcha * </label>
                                     <div class="captcha">
                                         <span> {!! captcha_img() !!}</span>
-                                        <button type="button" class="btn btn-success" style="background-color: #17933b " class="reload" id="reload">
+                                        <button type="button" class="btn btn-success" style="background-color: #2fa4ca " class="reload" id="reload">
                                             &#x21bb;
                                         </button>
                                     </div>
