@@ -88,6 +88,7 @@ class UserController extends Controller
         $user = User::withTrashed()->find($id);
         if(auth()->user()->isAdmin()){
             if($user && $user->trashed()){
+                $user->restore();
              }
             session()->flash('success','Barnatorja është rikthyer me sukses');
             return redirect()->action([DashboardController::class,'index']);

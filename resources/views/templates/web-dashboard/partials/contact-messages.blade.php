@@ -2,7 +2,7 @@
     <div class="testimonial-area">
         <div class="container">
             <div class="testimonial-active-3 nav-style-2-modify-1 dot-style-1 dot-style-1-center dot-style-1-mt1 wow tmFadeInUp">
-                {{-- @foreach($messages as $message)
+                @foreach($messages as $message)
                     <div class="testimonial-plr-1">
                         <div class="single-testimonial">
                             <h4>{{$message->name}}</h4>
@@ -16,7 +16,7 @@
                         </div>
 
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>

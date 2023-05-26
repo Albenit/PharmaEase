@@ -3,7 +3,7 @@
         <div class="custom-container">
             <div class="header-wrap header-space-between position-relative">
                 <div class="logo logo-width-1 logo-hm3">
-                   <span>BarnatoreOn</span>
+                   <span>PharmaEase</span>
                 </div>
                 <div
                     class="main-menu main-menu-grow main-menu-padding-1 main-menu-lh-1 main-menu-mrg-1 hm3-menu-padding d-none d-lg-block hover-boder">

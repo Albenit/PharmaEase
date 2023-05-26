@@ -14,9 +14,7 @@ class ContactMessagesRepository
     public function store(Request $request)
     {
 
-        $apiPath = env('API_ACTION');
-
-       $response =  Http::post($apiPath .'/saveContact',[
+       $response =  Contact::create([
            'name' => $request->get('name'),
             'email' => $request->get('email'),
             'phone_number' => $request->get('phone_number'),
@@ -24,56 +22,24 @@ class ContactMessagesRepository
         ]);
 
 
-       return $response->successful();
+       return $response;
     }
 
     public function getAll()
     {
 
-        // $apiPath = env('API_ACTION');
-
-        // $response =  Http::get($apiPath.'/getContacts');
-
-        // $arrayOfObjects = $response->json();
-
-        $contacts = collect([
-            'id' => 2,
-            'name' => 'Albenti',
-            'email' => 'Albenti@gamil.com',
-            'phone_number' => '04515151',
-            'message' => 'asdasd',
-        ]);
-
-        // $contacts = [
-
-        // ];
-
-
-        // for($i=0;$i<count($arrayOfObjects);$i++){
-        //     $contact = new Contact();
-        //     $contact->id = $arrayOfObjects[$i]['id'];
-        //     $contact->name  = $arrayOfObjects[$i]['name'];
-        //     $contact->email = $arrayOfObjects[$i]['email'];
-        //     $contact->phone_number =$arrayOfObjects[$i]['phone_number'];
-        //     $contact->message =$arrayOfObjects[$i]['message'];
-
-        //     $contacts[] = $contact;
-
-        // }
-
+        $contacts = Contact::where('mark_as_read',false)->get();
         return $contacts;
     }
 
 
     public function markContactasRead($id){
 
-        $apiPath = env('API_ACTION');
-
-        $response =  Http::post($apiPath .'/saveContact',[
-            'id' => $id
+        $response =  Contact::where('id',$id)->update([
+            'mark_as_read' => true
         ]);
 
-        return $response->successful();
+        return $response;
     }
 
 }
